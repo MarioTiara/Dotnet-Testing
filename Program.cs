@@ -9,8 +9,5 @@ namespace Dotnet_UnitTest
             Console.WriteLine("Hello World!");
         }
 
-        public static int Add (int x, int y){
-            return x+y;
-        }
     }
 }
