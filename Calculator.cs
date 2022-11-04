@@ -9,6 +9,10 @@ namespace Dotnet_UnitTest
         public int substract(int x, int y){
             return x-y;
         }
+
+        public double AddDouble(double x, double y){
+            return x+y;
+        }
     
     }
 }
