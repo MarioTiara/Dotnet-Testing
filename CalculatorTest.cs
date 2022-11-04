@@ -25,5 +25,16 @@ namespace Dotnet_UnitTest{
         public void FiboDoesNotIncludeZero(){
             Assert.All(calculator.FiboNumbers, n=>Assert.NotEqual(0,n));
         }
+
+        [Fact]
+        public void FibonaciIncludes13(){
+            Assert.Contains(13, calculator.FiboNumbers);
+        }
+
+        [Fact]
+        public void FinboDoesNotContain()
+        {
+            Assert.DoesNotContain(4,calculator.FiboNumbers);
+        }
     }
 }
