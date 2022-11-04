@@ -1,5 +1,5 @@
 using Xunit;
-
+using System.Collections.Generic;
 
 namespace Dotnet_UnitTest{
     
@@ -35,6 +35,14 @@ namespace Dotnet_UnitTest{
         public void FinboDoesNotContain()
         {
             Assert.DoesNotContain(4,calculator.FiboNumbers);
+        }
+
+        [Fact]
+        public void CheckCollection()
+        {
+            var expectedCollection = new List<int> () {1,1,2,3,5,8,13};
+            Assert.Equal(expectedCollection, calculator.FiboNumbers);
+            
         }
     }
 }
