@@ -12,5 +12,12 @@ namespace Dotnet_UnitTest{
             int expected=5;
             Assert.Equal(actual,expected);
         }
+
+        [Fact]
+        void AddDouble_GivenTwoDoubleValyes_returnDouble(){
+            var result = calculator.AddDouble(1.23, 3.50);
+            var expected=4.73;
+            Assert.Equal(expected,result,2); //2 is precission 
+        }
     }
 }
