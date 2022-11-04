@@ -9,7 +9,15 @@ namespace Dotnet_UnitTest
             Assert.NotNull(customer.Name);
             Assert.False(string.IsNullOrEmpty(customer.Name));
         }
+        [Fact]
+        public void CheckAgeIsInrange(){
+            Assert.InRange(customer.Age, 25,40);
+        }
 
+        [Fact]
+        public void CheckAgeIsNotInrange(){
+            Assert.NotInRange(customer.Age, 40,50);
+        }
         
     }
 }
