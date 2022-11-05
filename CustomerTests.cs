@@ -22,7 +22,8 @@ namespace Dotnet_UnitTest
         
         [Fact]
         public void GetOrdersBynNameNotNull(){
-            Assert.Throws<ArgumentException>(()=>customer.GetOrdersByNane(null));
+           var exceptionDetails= Assert.Throws<ArgumentException>(()=>customer.GetOrdersByNane(null));
+           Assert.Equal("String is null or empty", exceptionDetails.Message);
         }
     }
 }
