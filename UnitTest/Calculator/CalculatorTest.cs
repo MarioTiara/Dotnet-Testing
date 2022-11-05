@@ -67,5 +67,19 @@ namespace Dotnet_UnitTest.UnitTest.calculator{
             var expectedCollection = new List<int> () {1,1,2,3,5,8,13};
             Assert.Equal(expectedCollection, _calculatorFixture.calc.FiboNumbers);
         }
+
+        [Fact]
+        [Trait("Category","IsOdd")]
+        public void IsOdd_GivenOddValue_ReturnsTrue(){
+            var result = _calculatorFixture.calc.IsOdd(1);
+            Assert.True(result);
+        }
+
+        [Fact]
+        [Trait("Category","IsOdd")]
+        public void IsOdd_GivenOddValue_ReturnsFalse(){
+            var result=_calculatorFixture.calc.IsOdd(2);
+            Assert.False(result);
+        }
     }
 }

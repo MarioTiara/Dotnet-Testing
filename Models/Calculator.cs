@@ -16,6 +16,10 @@ namespace Dotnet_UnitTest.Models
         public double AddDouble(double x, double y){
             return x+y;
         }
+
+        public bool IsOdd(int value){
+            return (value%2)==1;
+        }
     
     }
 }
