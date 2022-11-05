@@ -36,8 +36,8 @@ namespace Dotnet_UnitTest
 
         [Fact]
         public void LoyalCustomerForOrdersG100(){
-            var customer =CustomerFactory.CreateCustomerInstance(102);
-            var loyalCustomer=Assert.IsType<LoyalCustomer>(_customerFixture.customer);
+            var customer =CustomerFactory.CreateCustomerInstance(101);
+            var loyalCustomer=Assert.IsType<LoyalCustomer>(customer);
             Assert.Equal(10, loyalCustomer.Discount);
         }
     }
