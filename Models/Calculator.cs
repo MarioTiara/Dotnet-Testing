@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Dotnet_UnitTest
+namespace Dotnet_UnitTest.Models
 {
     public class Calculator
     {

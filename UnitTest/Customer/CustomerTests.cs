@@ -1,5 +1,6 @@
 using Xunit;
 using System;
+using Dotnet_UnitTest.Models;
 namespace Dotnet_UnitTest
 {
     public class CustomerTests

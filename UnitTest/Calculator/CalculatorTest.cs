@@ -2,12 +2,15 @@ using Xunit;
 using Xunit.Abstractions;
 using System.Collections.Generic;
 using System.IO;
+using Dotnet_UnitTest.Models;
 
-namespace Dotnet_UnitTest{
+namespace Dotnet_UnitTest.UnitTest.calculator{
 
     public class CalculatorFixture
     {
         public Calculator calc=> new Calculator();
+        
+        
     }
     
     public class CalculatorTest: IClassFixture<CalculatorFixture>  {
