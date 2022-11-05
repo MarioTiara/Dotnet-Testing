@@ -1,6 +1,7 @@
 using Xunit;
 using Xunit.Abstractions;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Dotnet_UnitTest{
 
@@ -9,13 +10,15 @@ namespace Dotnet_UnitTest{
         public Calculator calc=> new Calculator();
     }
     
-    public class CalculatorTest:IClassFixture<CalculatorFixture> {
+    public class CalculatorTest: IClassFixture<CalculatorFixture>  {
         private readonly CalculatorFixture _calculatorFixture;
         private readonly ITestOutputHelper _testOutputHelper;
+        private readonly MemoryStream memoryStream;
         public CalculatorTest (CalculatorFixture calculatorFixture, ITestOutputHelper testOutputHelper){
             _calculatorFixture=calculatorFixture;
             _testOutputHelper=testOutputHelper;
             _testOutputHelper.WriteLine("Constructor");
+            memoryStream = new MemoryStream();
         }
 
         [Fact]

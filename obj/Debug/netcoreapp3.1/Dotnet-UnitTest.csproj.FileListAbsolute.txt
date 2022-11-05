@@ -97,3 +97,4 @@ E:\Personal\Dotnet-UnitTest\obj\Debug\netcoreapp3.1\Dotnet-UnitTest.csproj.CopyC
 E:\Personal\Dotnet-UnitTest\obj\Debug\netcoreapp3.1\Dotnet-UnitTest.dll
 E:\Personal\Dotnet-UnitTest\obj\Debug\netcoreapp3.1\Dotnet-UnitTest.pdb
 E:\Personal\Dotnet-UnitTest\obj\Debug\netcoreapp3.1\Dotnet-UnitTest.genruntimeconfig.cache
+E:\Personal\Dotnet-UnitTest\bin\Debug\netcoreapp3.1\nunit.framework.dll

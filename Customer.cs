@@ -12,6 +12,9 @@ namespace Dotnet_UnitTest
             return 100;
         }
         public int Age =>35;
+        public string GetFullName (string firstName, string lastName){
+            return $"{firstName} {lastName}";
+        }
     }
 
     public class LoyalCustomer:Customer{

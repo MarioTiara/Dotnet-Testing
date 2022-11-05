@@ -9,5 +9,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0-release-20220926-01"/>
     <PackageReference Include="xunit" Version="2.4.2"/>
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5"/>
+    <PackageReference Include="NUnit" Version="3.13.3"/>
   </ItemGroup>
 </Project>

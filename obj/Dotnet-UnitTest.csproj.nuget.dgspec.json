@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj": {}
+    "e:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj": {}
   },
   "projects": {
-    "E:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj": {
+    "e:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj",
+        "projectUniqueName": "e:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj",
         "projectName": "Dotnet-UnitTest",
-        "projectPath": "E:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj",
+        "projectPath": "e:\\Personal\\Dotnet-UnitTest\\Dotnet-UnitTest.csproj",
         "packagesPath": "C:\\Users\\mario.pratama\\.nuget\\packages\\",
-        "outputPath": "E:\\Personal\\Dotnet-UnitTest\\obj\\",
+        "outputPath": "e:\\Personal\\Dotnet-UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mario.pratama\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.4.0-release-20220926-01, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
             },
             "xunit": {
               "target": "Package",
