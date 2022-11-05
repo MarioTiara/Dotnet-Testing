@@ -22,8 +22,14 @@ namespace Dotnet_UnitTest
         
         [Fact]
         public void GetOrdersBynNameNotNull(){
-           var exceptionDetails= Assert.Throws<ArgumentException>(()=>customer.GetOrdersByNane(null));
+           var exceptionDetails= Assert.Throws<ArgumentException>(()=>customer.GetOrdersByName(null));
            Assert.Equal("String is null or empty", exceptionDetails.Message);
+        }
+
+        [Fact]
+        public void LoyalCustomerForOrdersG100(){
+            var customer =CustomerFactory.CreateCustomerInstance(102);
+            Assert.IsType<LoyalCustomer>(customer);
         }
     }
 }
