@@ -81,5 +81,15 @@ namespace Dotnet_UnitTest.UnitTest.calculator{
             var result=_calculatorFixture.calc.IsOdd(2);
             Assert.False(result);
         }
+
+        [Theory]
+        [InlineData(1, true)]
+        [InlineData(200, false)]
+        [InlineData(3,true)]
+        [Trait("Category","IsOdd")]
+        public void IsOdd_TestOddAndEven(int value, bool expected){
+            var result =_calculatorFixture.calc.IsOdd(value);
+            Assert.Equal(expected,result);
+        }
     }
 }
