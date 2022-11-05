@@ -11,8 +11,11 @@ namespace Dotnet_UnitTest{
     
     public class CalculatorTest:IClassFixture<CalculatorFixture> {
         private readonly CalculatorFixture _calculatorFixture;
-        public CalculatorTest (CalculatorFixture calculatorFixture){
+        private readonly ITestOutputHelper _testOutputHelper;
+        public CalculatorTest (CalculatorFixture calculatorFixture, ITestOutputHelper testOutputHelper){
             _calculatorFixture=calculatorFixture;
+            _testOutputHelper=testOutputHelper;
+            _testOutputHelper.WriteLine("Constructor");
         }
 
         [Fact]
@@ -33,12 +36,14 @@ namespace Dotnet_UnitTest{
         [Fact]
         [Trait("Category","Fibo")]
         public void FiboDoesNotIncludeZero(){
-            Assert.All(_calculatorFixture.calc.FiboNumbers, n=>Assert.NotEqual(0,n));
+            _testOutputHelper.WriteLine("FiboDoesNotIncludeZero");
+            Assert.DoesNotContain(0, _calculatorFixture.calc.FiboNumbers);
         }
 
         [Fact]
         [Trait("Category","Fibo")]
         public void FibonaciIncludes13(){
+            _testOutputHelper.WriteLine("FibonaciIncludes13");
             Assert.Contains(13, _calculatorFixture.calc.FiboNumbers);
         }
 
