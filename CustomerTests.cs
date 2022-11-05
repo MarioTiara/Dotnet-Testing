@@ -1,4 +1,5 @@
 using Xunit;
+using System;
 namespace Dotnet_UnitTest
 {
     public class CustomerTests
@@ -19,5 +20,9 @@ namespace Dotnet_UnitTest
             Assert.NotInRange(customer.Age, 40,50);
         }
         
+        [Fact]
+        public void GetOrdersBynNameNotNull(){
+            Assert.Throws<ArgumentException>(()=>customer.GetOrdersByNane(null));
+        }
     }
 }
