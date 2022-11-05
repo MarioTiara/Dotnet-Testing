@@ -3,8 +3,8 @@ using Xunit;
 using Xunit.Abstractions;
 namespace Dotnet_UnitTest.UnitTest.customer
 {
-    
-    public class CustomerDetailsTests:IClassFixture<CustomerFixture>
+    [Collection("Customer")]
+    public class CustomerDetailsTests
     {
         private readonly CustomerFixture _customerFixture;
         public CustomerDetailsTests(CustomerFixture customerFixture){
