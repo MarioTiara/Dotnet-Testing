@@ -93,7 +93,7 @@ namespace Dotnet_UnitTest.UnitTest.calculator{
         }
 
         [Theory]
-        [MemberData(nameof(TestDataShare.IsOddEvenData), MemberType=typeof(TestDataShare) )]
+        [MemberData(nameof(TestDataShare.IsOddOrEvenExternalData), MemberType=typeof(TestDataShare) )]
         public void IsOdd_TestOddAndEvenUsingDataShare(int value, bool expected){
             var result =_calculatorFixture.calc.IsOdd(value);
             Assert.Equal(expected,result);
