@@ -98,6 +98,14 @@ namespace Dotnet_UnitTest.UnitTest.calculator{
             var result =_calculatorFixture.calc.IsOdd(value);
             Assert.Equal(expected,result);
         }
+
+        [Theory]
+        [IsOddOrEvenData]
+        public void IsOdd_TestOddAndEvenUsingDataAtribute(int value, bool expected){
+            var result =_calculatorFixture.calc.IsOdd(value);
+            Assert.Equal(expected,result);
+        }
+    
     
     }
 }
