@@ -20,6 +20,7 @@ namespace DemoLibrary.Tests
             
             //Act
             double actual = Calculator.Add(x,y);
+            
             Assert.Equal(expected, actual);
         }
 
@@ -29,8 +30,16 @@ namespace DemoLibrary.Tests
         {
             //arrange
             double actual = Calculator.Divide(x, y);
-
+            
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Divide_DivideByZero()
+        {
+            double expcted = 0;
+            double actual = Calculator.Divide(15, 0);
+            Assert.Equal(expcted, actual);
         }
     }
 }
