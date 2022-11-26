@@ -4,14 +4,14 @@ Unit testing is one of important skill that developers should have, because it w
 
 ## The testing skills has been cracked are:
 ### 1. Assert
-    * The Assert Phase
-    * Asserting numeric values
-    * Asserting string values
-    * Asserting boolean values as well as null values
-    * Asserting Collections
-    * Asserting a range of values
-    * Asserting Exceptions
-    * Asserting object types
+    - The Assert Phase
+    - Asserting numeric values
+    - Asserting string values
+    - Asserting boolean values as well as null values
+    - Asserting Collections
+    - Asserting a range of values
+    - Asserting Exceptions
+    - Asserting object types
 ### 2. Arrange Phase, and Managing Tests
     * Collections and Traits
     * Class Fixtures and IClassFixture
