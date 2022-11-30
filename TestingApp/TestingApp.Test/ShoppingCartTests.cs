@@ -69,11 +69,20 @@ namespace TestingApp.Test
             var dbMock = new DbServiceMock();
             dbMock.ProcessResult= true;
             var shoppingCart = new ShoppingCart(dbMock);
-            var product = new Product(0, "Shoes", 23.5);
+            var product = new Product(1, "Shoes", 23.5);
             shoppingCart.AddProduct(product);
             Assert.False(shoppingCart.DeleteProduct(0));
         }
 
+        [Fact]
+        public void DeleteProduct_InputId1_ReturnTrue(){
+             var dbMock = new DbServiceMock();
+            dbMock.ProcessResult= true;
+            var shoppingCart = new ShoppingCart(dbMock);
+            var product = new Product(1, "Shoes", 23.5);
+            shoppingCart.AddProduct(product);
+            Assert.True(shoppingCart.DeleteProduct(1));
+        }
         
     }
 }
