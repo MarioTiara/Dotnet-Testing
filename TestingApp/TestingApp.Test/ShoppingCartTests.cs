@@ -37,6 +37,7 @@ namespace TestingApp.Test
 
             //Assert
             Assert.True(result);
+            Assert.Equal("Shoes", dbMock.ProductBeingProcessed.Name);
 
         }
 
