@@ -42,5 +42,38 @@ namespace TestingApp.Test
 
         }
 
+        [Fact]
+        public void AddProduct_Failure_DueToInvalidPayLoad(){
+            var dbMock= new DbServiceMock();
+            dbMock.ProcessResult=true;
+            var shoppingCart= new ShoppingCart(dbMock);
+
+            
+            var result= shoppingCart.AddProduct(null);
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void DeleteProduct_InpuIdtNull_ReturnFalse(){
+            var dbMock= new DbServiceMock();
+            dbMock.ProcessResult= true;
+            var shoppingCart = new ShoppingCart(dbMock);
+
+            var result= shoppingCart.DeleteProduct(null);
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void DeleteProduct_InputId0_ResturnFalse(){
+            var dbMock = new DbServiceMock();
+            dbMock.ProcessResult= true;
+            var shoppingCart = new ShoppingCart(dbMock);
+            var product = new Product(0, "Shoes", 23.5);
+            shoppingCart.AddProduct(product);
+            Assert.False(shoppingCart.DeleteProduct(0));
+        }
+
+        
     }
 }
