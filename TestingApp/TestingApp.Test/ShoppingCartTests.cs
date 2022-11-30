@@ -12,7 +12,7 @@ namespace TestingApp.Test
         {
             if (prodId==null) return false;
             ProductIdBeingProcessed=(int)prodId;
-            return true;
+            return ProcessResult;
         }
 
         public bool SaveItemToShoppingCart(Product? product)
@@ -20,7 +20,7 @@ namespace TestingApp.Test
             if (product==null) return false;
 
             ProductBeingProcessed=product;
-            return true;
+            return ProcessResult;
         }
     }
     public class ShoppingCartTests
@@ -37,6 +37,7 @@ namespace TestingApp.Test
 
             //Assert
             Assert.True(result);
+            Assert.Equal(result, dbMock.ProcessResult);
             Assert.Equal("Shoes", dbMock.ProductBeingProcessed.Name);
 
         }
